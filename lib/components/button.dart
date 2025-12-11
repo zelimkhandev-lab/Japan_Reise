@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key});
+  final String mytext;
+  const MyButton({
+    super.key,
+    required this.mytext,
+    });
 
   @override
   Widget build(BuildContext context) {
@@ -9,13 +13,13 @@ class MyButton extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 51, 179, 156),
-        borderRadius: BorderRadius.circular(30)
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Reise Starten",
+            mytext,
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -23,10 +27,7 @@ class MyButton extends StatelessWidget {
             ),
           ),
           SizedBox(width: 10),
-          Icon(
-            Icons.arrow_forward,
-            color: Colors.white,
-          ),
+          Icon(Icons.arrow_forward, color: Colors.white),
         ],
       ),
     );
