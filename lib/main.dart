@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:japan_reise/pages/menu_page.dart';
 import 'package:japan_reise/pages/start_page.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 		debugShowCheckedModeBanner: false,
 		home: StartPage(),
+		routes: {
+			'/startpage':(context) => StartPage(),
+			'/menupage':(context) => MenuPage(),
+		},
 		);
   }
 }
