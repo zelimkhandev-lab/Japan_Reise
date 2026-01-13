@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:japan_reise/components/button.dart';
+import 'package:japan_reise/components/event_tile.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -20,6 +21,7 @@ class MenuPage extends StatelessWidget {
         )],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: EdgeInsets.all(25),
@@ -52,6 +54,46 @@ class MenuPage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Suche Event",
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                    width: 2,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                    width: 2,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 13),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Events", 
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          SizedBox(height: 5),
+          EventTile(
+            name: "Mitima Matsuri Festival", 
+            price: "€ 49", 
+            imagePath: "lib/images/japan7.png", 
+            rating: "5"
           ),
         ],
       ),
