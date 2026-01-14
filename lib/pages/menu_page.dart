@@ -93,7 +93,10 @@ class MenuPage extends StatelessWidget {
             name: "Mitima Matsuri Festival", 
             price: "€ 49", 
             imagePath: "lib/images/japan7.png", 
-            rating: "5"
+            rating: "5",
+            details: () {
+              
+            },
           ),
         ],
       ),
